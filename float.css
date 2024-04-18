@@ -1,11 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.backgroundimage{
+  background-image: url("assets/images/hero-dark.jpg");
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed;
 }
-
-
-
 .cta-section {
     padding: 100px 0;
     background-color: #f8f9fa;
@@ -78,12 +76,12 @@
 
 .cards {
     width: 26%;
+    height: 280px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
     position: relative;
-    background: #1e1e1e;
+    background: rgb(15, 15, 15) ;
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
@@ -92,14 +90,25 @@
 }
 
 .cards:hover::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 180%;
-    background:linear-gradient(10turn, #ef0d0d00, #93939380 50%, #fff);
-    transform: rotate(45deg);
-    animation: animate2 5s linear infinite;
+    background:linear-gradient(180deg, #ef0d0d00, #93939380 50%, #fff);
+    opacity: 1;
 }
+
+.cards::before {
+  animation: animate2 5s ease-in-out infinite;
+    background: linear-gradient(90deg, #1e1e1e00, #93939380 50%, #fff);
+    content: "";
+    display: block;
+    height: 600px;
+    left: -10px;
+    opacity: 0;
+    position: absolute;
+    top: -60px;
+    transition: 2s ease-in-out;
+    width: 100%;
+    z-index: -1;
+}
+
 
 @keyframes animate2 {
   from{
@@ -114,7 +123,7 @@
     position: absolute;
     content: '';
     inset: 5px;
-    background: #1e1e1e;
+    background: rgb(15, 15, 15);
     border-radius: 5px;
 }
 
@@ -122,7 +131,13 @@
     transform: scale(1.05); /* Apply scale transformation on hover */
 } 
 
+.cards h2{
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
 .cards h2, .cards p {
+  text-align: left;
     color: white;
     z-index: 20;
   }
@@ -177,21 +192,27 @@
 
 
 
-
-
-
-
 .moreprojects{ 
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 .moreprojects a{
-    color: #fff;
+    color: black;
+    background-color: #fff;
     border: 1px solid  white;
     border-radius: 15px;
     padding: 15px;
     font-size: 20px;
+}
+
+.moreprojects a:hover{
+  color: white;
+  background-color: transparent;
+  border: 1px solid  white;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 20px;
 }
 
   @media (max-width: 768px) {
@@ -287,12 +308,19 @@
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
     border-radius: 30px;
-    background-color: #1e1e1e;
+    background: linear-gradient(to right, #232526, #414345);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    
+  }
+  .card-title{
+    color: #e1e1e1;
+  }
+  .card-text{
+    color: #e1e1e1;
   }
   .carousel-inner {
     padding: 1em;

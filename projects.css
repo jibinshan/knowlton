@@ -1,0 +1,132 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("assets/images/hero-dark.jpg");
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed;
+    font-family: sans-serif;
+    font-family: 'Blinker', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.card-section {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards {
+    width: 26%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgb(15, 15, 15) ;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 30px;
+    transition: transform 0.5s ease;
+}
+
+.cards img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.cards::before{
+
+    animation: animate2 5s ease-in-out infinite;
+    background: linear-gradient(90deg, #1e1e1e00, #93939380 50%, #fff);
+    content: "";
+    display: block;
+    height: 600px;
+    left: -10px;
+    opacity: 0;
+    position: absolute;
+    top: -60px;
+    transition: 2s ease-in-out;
+    width: 100%;
+    z-index: -1;
+}
+.cards:hover::before {
+    /* content: '';
+    position: absolute;
+    width: 50%;
+    height: 180%; */
+    background:linear-gradient(180deg,rgba(6,239,29,.343),#06d8dca3 50%,rgba(211,5,5,.573));
+    /* transform: rotate(45deg);
+    animation: animate2 5s linear infinite; */
+    opacity: 1;
+
+}
+
+
+@keyframes animate2 {
+  from{
+    transform:  rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.cards::after{
+    position: absolute;
+    content: '';
+    inset: 5px;
+    background: rgb(15, 15, 15);
+    border-radius: 5px;
+}
+
+.cards:hover {
+    transform: scale(1.05); /* Apply scale transformation on hover */
+} 
+
+.cards h2{
+  text-align: center;
+  color: white;
+  z-index: 20;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+ .cards p {
+    margin-top: -10px;
+    text-align: center;
+    color: white;
+    z-index: 20;
+  }
+  .cards-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cards-section > h1{
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+        width: fit-content;
+        height: fit-content;
+    }
+}

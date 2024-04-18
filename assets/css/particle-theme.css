@@ -894,8 +894,6 @@ nav a em {
 	.navbar-nav li.menu-item-has-children:before {
 		/* menu items dropdown */
 		font-family: FontAwesome;
-		content: "\f078";
-		content:"\f107";
 		color: #ffffff;
 		font-size: 14px;
 		float: right;
@@ -1653,7 +1651,7 @@ section.pa-centered-section {
 /* Full height (but not taller than 1.8*width) */
 
 .pa-full-height {
-	height: 100vh;
+	height: 105vh;
 }
 
 /* When section uses a background image as cover */
@@ -1784,9 +1782,16 @@ table a,
 }
 
 .row.pa-hero-logo {
-	width: 928px;
+	width: 600px;
 	max-width: 94%;
 	margin: 0 auto;
+	margin-left: 300px;
+}
+
+@media (max-width: 768px) {
+    .row.pa-hero-logo {
+		margin-left: 30px;
+    }
 }
 
 .pa-hero-logo img {
@@ -2011,6 +2016,7 @@ body.pa-dark .pa-stripe-heading {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
 	font-weight: 300;
+	padding: 10px;
 }
 
 .pa-portfolio-thumb-hover-icon {

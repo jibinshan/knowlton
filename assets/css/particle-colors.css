@@ -81,10 +81,10 @@ a.pa-button-secondary {
 
 /* Gradient backgrounds (combine with e.g. .pa-absolute-fill) */
 .pa-gradient-back-v1 {
-	background: rgb(0,242,255);
+	/* background: rgb(0,242,255);
 	background: -webkit-gradient(linear, left top, right top, from(rgba(0,242,255,0.8)), to(rgba(113,0,184,0.8)));
 	background: -o-linear-gradient(left, rgba(0,242,255,0.8) 0%, rgba(113,0,184,0.8) 100%);
-	background: linear-gradient(90deg, rgba(0,242,255,0.8) 0%, rgba(113,0,184,0.8) 100%);
+	background: linear-gradient(90deg, rgba(0,242,255,0.8) 0%, rgba(113,0,184,0.8) 100%); */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00f2ff",endColorstr="#7100B8",GradientType=1);
 }
 

@@ -123,7 +123,7 @@ $(document).ready(function () {
 	// Initiate typed.js text effect (done custom for each typed text effect)
 	$(".animated-text-effect").typed({
 		// Enter your texts here, these texts are applied to light homepages
-		strings: ["Awesome Ineractive Effect^", "Click on the live effect!^", "Coolest Modern HTML Theme^"], 
+		strings: ["Introduction to Software Solutions^", "Technical Support and Maintenance^", "Integration and Compatibility^"], 
 		contentType: "text", 
 		typeSpeed: 30, 
 		loop: true, 
